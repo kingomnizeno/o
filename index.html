@@ -1,32 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>King Omni</title>
   <link rel="stylesheet" href="style.css"/>
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <div class="full-screen">
-    <div class="logo-container">
-      <img src="king-omni.png" alt="King Omni Logo" class="logo"/>
-    </div>
-
+  <div class="container">
+    <img src="king-omni.png" alt="King Omni Logo" class="logo"/>
     <h1>👑 King Omni</h1>
 
-    <div class="contract-bar">
-      <span class="contract-text">CM1WUVP5X2GUSKU3F9Q3GOJAFVWEXX1MH8JESCWPUMP</span>
+    <div class="social-icons">
+      <a href="https://x.com/KingZeno63759" target="_blank" class="icon x-icon"></a>
+      <a href="mailto:kingomnizeno@gmail.com" class="icon email-icon"></a>
+      <a href="https://t.me/KingOmniCommunity" target="_blank" class="icon telegram-icon"></a>
     </div>
 
-    <div class="links-bar">
-      <a href="https://x.com/KingZeno63759" target="_blank" class="icon-link">✖️</a>
-      <a href="mailto:kingomnizeno@gmail.com" class="icon-link">📩</a>
-      <a href="https://t.me/KingOmniCommunity" target="_blank" class="icon-link">💬</a>
+    <div class="contract-box" onclick="copyContract()">
+      <span id="contract-text">CM1WUVP5X2GUSKU3F9Q3GOJAFVWEXX1MH8JESCWPUMP</span>
+      <button class="copy-btn">📋</button>
     </div>
 
     <div class="coming-soon">
-      <div class="coming-item">🔗 Dextools / Solscan link</div>
-      <div class="coming-item">🔗 Dexscreener link</div>
+      <a href="https://www.dextools.io/" target="_blank" class="coming-item">🔗 Dextools</a>
+      <a href="https://dexscreener.com/" target="_blank" class="coming-item">🔗 Dexscreener</a>
       <div class="coming-item">📜 Smart contract address (SPL Token)</div>
     </div>
   </div>
