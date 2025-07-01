@@ -1,0 +1,5 @@
+function copyContract() {
+  const contractText = document.getElementById('contract-text').innerText;
+  navigator.clipboard.writeText(contractText);
+  alert('Contract address copied!');
+}
