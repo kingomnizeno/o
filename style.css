@@ -1,9 +1,9 @@
 body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(135deg, #000, #111);
-  color: #fff;
-  font-family: sans-serif;
+  background: linear-gradient(135deg, #fefefe, #e9e9e9);
+  font-family: 'Helvetica', sans-serif;
+  color: #222;
   text-align: center;
   min-height: 100vh;
   display: flex;
@@ -11,42 +11,66 @@ body {
   justify-content: center;
 }
 
-.container {
-  max-width: 600px;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 15px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+.hero {
+  padding: 30px;
+  max-width: 700px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  box-shadow: 0 0 40px rgba(0,0,0,0.2);
+}
+
+.logo-container {
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 200px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
 }
 
 h1 {
-  font-size: 3rem;
-  color: #00e5ff;
-  margin-bottom: 10px;
+  font-size: 2.8rem;
+  color: #111;
+  margin-bottom: 30px;
 }
 
-p, li {
-  font-size: 1.2rem;
-  margin: 10px 0;
+.social-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 40px;
 }
 
-a {
-  color: #00e5ff;
+.button {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 30px;
+  background: #ffd700;
+  color: #000;
   text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.2s, background 0.2s;
 }
 
-a:hover {
-  text-decoration: underline;
+.button:hover {
+  transform: scale(1.05);
+  background: #ffbb00;
 }
 
-.placeholders ul {
+.coming-soon ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
-.placeholders li {
-  background: rgba(255,255,255,0.1);
+.coming-soon li {
+  background: rgba(255,215,0,0.2);
   margin: 10px 0;
-  padding: 10px;
-  border-radius: 10px;
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 1.1rem;
 }
