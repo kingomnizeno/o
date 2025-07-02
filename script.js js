@@ -1,0 +1,6 @@
+function copyContract() {
+  const text = document.getElementById('contract-text').innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    alert("Contract copied!");
+  });
+}
