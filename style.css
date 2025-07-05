@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> </title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+            perspective: 1000px;
+        }
+        
+        .box {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: rotate 8s infinite linear;
+            background: rgba(0, 100, 255, 0.5); /* لون أزرق شفاف */
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 100, 255, 0.3);
+        }
+        
+        .box:before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            background: rgba(0, 150, 255, 0.3);
+            border-radius: 8px;
+            transform: translateZ(-20px);
+        }
+        
+        .box:after {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            background: rgba(0, 200, 255, 0.2);
+            border-radius: 5px;
+            transform: translateZ(-40px);
+        }
+        
+        @keyframes rotate {
+            0% { transform: rotateY(0deg) rotateX(20deg); }
+            100% { transform: rotateY(360deg) rotateX(20deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
