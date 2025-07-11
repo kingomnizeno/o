@@ -1,9 +1,12 @@
 
 body {
-  background-color: #111;
-  color: #fff;
-  font-family: Arial, sans-serif;
-  text-align: center;
+  background: linear-gradient(135deg, rgba(255, 140, 0, 0.7), rgba(255, 215, 0, 0.7)) fixed;
+  color: white;
+  font-family: 'Comic Neue', cursive;
+  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
+  padding: 10px;
+  position: relative;
 }
 
 .container {
