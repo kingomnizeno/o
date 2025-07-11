@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,69 +6,26 @@
   <title>W Swap</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="logo.png" />
+  <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.js"></script>
 </head>
 <body>
   <div class="container">
-    <img src="logo.png" alt="Logo" class="logo" />
+    <img src="logo.png" class="logo" alt="W Swap Logo">
     <h1>W Swap</h1>
-    <p class="pair">Default pair: SOL ⇄ USDT</p>
     <button id="connect-button">Connect Wallet</button>
     <div class="swap-box">
       <select id="from-token"></select>
       <select id="to-token"></select>
-      <input type="number" id="amount" placeholder="Amount" />
+      <input type="number" id="amount" placeholder="Amount">
       <label for="slippage">Slippage:</label>
       <select id="slippage">
-<select id="percentSelect" onchange="handlePercentageChange()">
-  <option value="">Select or enter custom %</option>
-  <option value="0.5">0.5%</option>
-  <option value="1">1%</option>
-  <option value="2">2%</option>
-  <option value="custom">Custom %...</option>
-</select>
-
-<input type="number" id="customPercent" style="display:none;" step="0.1" min="0.1" placeholder="Enter custom %">
-
-<p id="errorMsg" style="color:red;"></p>
-
-<script>
-function handlePercentageChange() {
-  const select = document.getElementById('percentSelect');
-  const customInput = document.getElementById('customPercent');
-  const errorMsg = document.getElementById('errorMsg');
-  
-  errorMsg.textContent = '';
-  
-  if (select.value === 'custom') {
-    customInput.style.display = 'block';
-    customInput.focus();
-  } else if (select.value) {
-    customInput.style.display = 'none';
-    // Valid selection - proceed with the value
-    console.log('Selected percentage:', select.value + '%');
-  }
-}
-
-// Validate custom input when user leaves the field
-document.getElementById('customPercent').addEventListener('blur', function() {
-  const value = parseFloat(this.value);
-  const errorMsg = document.getElementById('errorMsg');
-  
-  if (isNaN(value)) {
-    errorMsg.textContent = 'Please enter a valid number';
-  } else if (value < 0.1) {
-    errorMsg.textContent = 'Custom percentage must be at least 0.1%';
-  } else {
-    errorMsg.textContent = '';
-    // Valid custom percentage - proceed with the value
-    console.log('Custom percentage:', value + '%');
-  }
-});
-</script>
+        <option value="0.1">0.1%</option>
+        <option value="0.5" selected>0.5%</option>
+        <option value="1">1%</option>
       </select>
       <button id="swap-button">Swap</button>
     </div>
-    <footer>Powered by W Swap</footer>
+    <footer>Powered by W Swap — Built by Crypto21</footer>
   </div>
   <script src="app.js"></script>
 </body>
