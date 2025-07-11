@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>W Swap</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="logo.png" />
+  <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.js"></script>
+</head>
+<body>
+  <div class="container">
+    <img src="logo.png" class="logo" alt="W Swap Logo">
+    <h1>W Swap</h1>
+    <button id="connect-button">Connect Wallet</button>
+    <div class="swap-box">
+      <select id="from-token"></select>
+      <select id="to-token"></select>
+      <input type="number" id="amount" placeholder="Amount">
+      <label for="slippage">Slippage:</label>
+      <select id="slippage">
+        <option value="0.1">0.1%</option>
+        <option value="0.5" selected>0.5%</option>
+        <option value="1">1%</option>
+      </select>
+      <button id="swap-button">Swap</button>
+      <div id="status"></div>
+    </div>
+    <footer>Powered by W Swap — Built by Crypto21</footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
